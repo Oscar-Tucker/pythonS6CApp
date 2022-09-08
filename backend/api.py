@@ -127,3 +127,7 @@ def delete_subject(id):
     db.session.delete(subject)
     db.session.commit()
     return subject_schema.jsonify(subject)
+
+db.create_all()
+if __name__ =="__main__":
+    app.run(debug=True)
